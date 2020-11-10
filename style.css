@@ -1,0 +1,74 @@
+/* Task */
+
+body {
+    /* background-color: #0080c0; */
+    /* display: flex; */
+
+}
+
+#processing
+{
+    width: 200px;
+    height: 200px;
+}
+
+#wheels {
+    display: flex;
+}
+
+
+@keyframes fadeIn {
+    0% {
+      opacity:0;
+    }
+    100% {
+      opacity:1;
+    }
+  }
+
+
+@keyframes spin { 
+    100% { 
+        transform:rotate(360deg); } 
+}
+
+@keyframes pulse {
+    0% {
+        color: #8000ff;
+    } 
+    25% {
+        color: #8080c0;
+    }
+    50% {
+        color: #8080ff;
+    }
+    75% {
+        color: #0000ff;
+    }
+    100% {
+        color: #004040;
+    }
+}
+
+#first-wheel {
+    width: 100px;
+    height: 100px;
+    animation:spin 4s linear infinite, 
+        pulse 5s infinite;
+}
+
+#second-wheel {
+    width: 50px;
+    height: 50px;
+    animation:spin 4s linear infinite, 
+        pulse 5s infinite;
+    animation-direction:reverse;
+}
+
+h4 {
+    text-align: center;
+    margin-right: auto;
+    font-family: 'Courier New', Courier, monospace ;
+    animation: fadeIn 3s infinite, 
+        pulse linear 5s infinite;
+ }
